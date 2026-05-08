@@ -15,5 +15,5 @@ urlpatterns = [
     path('admin-panel/login/', views.admin_login, name='admin_login'),
     path('admin-panel/profile/', views.admin_profile, name='admin_profile'),
     path('admin-panel/logout/', views.admin_logout, name='admin_logout'),
-    re_path(r'^(?P<unknown_path>.*)$', views.custom_404_debug, name='custom_404_debug'),
+    #re_path(r'^(?P<unknown_path>.*)$', views.custom_404_debug, name='custom_404_debug'),
 ]
