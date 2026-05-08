@@ -1,0 +1,419 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Авторские украшения
+{% endblock %}
+
+{% block body_class %}author-jewelry-page-view{% endblock %}
+
+{% block content %}
+<main class="author-jewelry-main">
+    <section class="author-jewelry-page">
+        <h1>АВТОРСКИЕ УКРАШЕНИЯ</h1>
+
+        <div class="author-jewelry-layout">
+            <div class="author-jewelry-content">
+                <div class="author-jewelry-block">
+                    <h2>Информация</h2>
+                    <p>Иногда самое ценное то, что создано не серийно, а с душой. Украшение, которое становится продолжением вашего настроения, характера, момента. Мы верим, что у каждого есть внутренний художник, способный придумать идеальное воплощение своей идеи.</p>
+                </div>
+
+                <div class="author-jewelry-separator"></div>
+
+                <div class="author-jewelry-block">
+                    <h2>Что делаем?</h2>
+                    <p>Вы можете сделать свое авторское украшение. Просто заполните форму.</p>
+                </div>
+
+                <div class="author-jewelry-btn-spacer" aria-hidden="true"></div>
+
+            <button type="button" class="author-jewelry-btn" id="authorJewelryScrollToForm">заполнить форму</button>
+            </div>
+
+            <div class="author-jewelry-image">
+                <img src="{% static 'main/img/author_jews/main_image.png' %}" alt="Авторские украшения">
+            </div>
+        </div>
+    </section>
+
+    <section class="services-cards author-examples">
+        <h2>ПРИМЕРЫ РАБОТ</h2>
+        <div class="services-cards-grid">
+            <article class="service-card">
+                <img class="service-card-image" src="{% static 'main/img/work_examples/photo1.png' %}" alt="">
+                <h3 class="service-card-title">Лунар</h3>
+                <p class="service-card-desc">Усыпанное мерцающими камнями, словно карта звёздного неба на вашем пальце.</p>
+                <button type="button" class="service-card-btn">посмотреть подробнее</button>
+            </article>
+
+            <article class="service-card">
+                <img class="service-card-image" src="{% static 'main/img/work_examples/photo2.png' %}" alt="">
+                <h3 class="service-card-title">Лесная капель</h3>
+                <p class="service-card-desc">Серьги с зелеными камнями, как роса на утренней листве, дарят ощущение свежести.</p>
+                <button type="button" class="service-card-btn">посмотреть подробнее</button>
+            </article>
+
+            <article class="service-card">
+                <img class="service-card-image" src="{% static 'main/img/work_examples/photo3.png' %}" alt="">
+                <h3 class="service-card-title">В унисон</h3>
+                <p class="service-card-desc">Воплощение чистоты искренних чувств, верности и холодное сияние вечной любви.</p>
+                <button type="button" class="service-card-btn">посмотреть подробнее</button>
+            </article>
+
+            <article class="service-card">
+                <img class="service-card-image" src="{% static 'main/img/work_examples/photo4.png' %}" alt="">
+                <h3 class="service-card-title">Элегия</h3>
+                <p class="service-card-desc">Кольцо, чья сдержанная форма подчеркивает холодный блеск благородного металла.</p>
+                <button type="button" class="service-card-btn">посмотреть подробнее</button>
+            </article>
+
+            <article class="service-card">
+                <img class="service-card-image" src="{% static 'main/img/work_examples/photo5.png' %}" alt="">
+                <h3 class="service-card-title">Солнечный круг</h3>
+                <p class="service-card-desc">Это кольцо из теплого желтого золота, словно капля солнечного света на вашей руке.</p>
+                <button type="button" class="service-card-btn">посмотреть подробнее</button>
+            </article>
+
+            <article class="service-card">
+                <img class="service-card-image" src="{% static 'main/img/work_examples/photo6.png' %}" alt="">
+                <h3 class="service-card-title">Аксиома</h3>
+                <p class="service-card-desc">Современный арт-объект на руке, воплощающий идеал точности, баланса и смелого дизайна.</p>
+                <button type="button" class="service-card-btn">посмотреть подробнее</button>
+            </article>
+        </div>
+
+        <div class="services-cards-accordion">
+            <article class="service-accordion-item is-open">
+                <button type="button" class="service-accordion-toggle">
+                    <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                    <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                    <span>Лунар</span>
+                </button>
+                <div class="service-accordion-content">
+                    <div class="service-accordion-top">
+                        <div class="service-accordion-image-wrap">
+                            <img src="{% static 'main/img/work_examples/photo1.png' %}" alt="">
+                        </div>
+                        <div class="service-accordion-text">
+                            <h3>Лунар</h3>
+                            <p>Усыпанное мерцающими камнями, словно карта звёздного неба на вашем пальце.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+
+            <article class="service-accordion-item">
+                <button type="button" class="service-accordion-toggle">
+                    <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                    <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                    <span>Лесная капель</span>
+                </button>
+                <div class="service-accordion-content">
+                    <div class="service-accordion-top">
+                        <div class="service-accordion-image-wrap">
+                            <img src="{% static 'main/img/work_examples/photo2.png' %}" alt="">
+                        </div>
+                        <div class="service-accordion-text">
+                            <h3>Лесная капель</h3>
+                            <p>Серьги с зелеными камнями, как роса на утренней листве, дарят ощущение свежести.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+
+            <article class="service-accordion-item">
+                <button type="button" class="service-accordion-toggle">
+                    <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                    <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                    <span>В унисон</span>
+                </button>
+                <div class="service-accordion-content">
+                    <div class="service-accordion-top">
+                        <div class="service-accordion-image-wrap">
+                            <img src="{% static 'main/img/work_examples/photo3.png' %}" alt="">
+                        </div>
+                        <div class="service-accordion-text">
+                            <h3>В унисон</h3>
+                            <p>Воплощение чистоты искренних чувств, верности и холодное сияние вечной любви.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+
+            <article class="service-accordion-item">
+                <button type="button" class="service-accordion-toggle">
+                    <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                    <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                    <span>Элегия</span>
+                </button>
+                <div class="service-accordion-content">
+                    <div class="service-accordion-top">
+                        <div class="service-accordion-image-wrap">
+                            <img src="{% static 'main/img/work_examples/photo4.png' %}" alt="">
+                        </div>
+                        <div class="service-accordion-text">
+                            <h3>Элегия</h3>
+                            <p>Кольцо, чья сдержанная форма подчеркивает холодный блеск благородного металла.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+
+            <article class="service-accordion-item">
+                <button type="button" class="service-accordion-toggle">
+                    <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                    <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                    <span>Солнечный круг</span>
+                </button>
+                <div class="service-accordion-content">
+                    <div class="service-accordion-top">
+                        <div class="service-accordion-image-wrap">
+                            <img src="{% static 'main/img/work_examples/photo5.png' %}" alt="">
+                        </div>
+                        <div class="service-accordion-text">
+                            <h3>Солнечный круг</h3>
+                            <p>Это кольцо из теплого желтого золота, словно капля солнечного света на вашей руке.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+
+            <article class="service-accordion-item">
+                <button type="button" class="service-accordion-toggle">
+                    <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                    <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                    <span>Аксиома</span>
+                </button>
+                <div class="service-accordion-content">
+                    <div class="service-accordion-top">
+                        <div class="service-accordion-image-wrap">
+                            <img src="{% static 'main/img/work_examples/photo6.png' %}" alt="">
+                        </div>
+                        <div class="service-accordion-text">
+                            <h3>Аксиома</h3>
+                            <p>Современный арт-объект на руке, воплощающий идеал точности, баланса и смелого дизайна.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <div class="service-details-modal" id="authorDetailsModal" aria-hidden="true">
+        <div class="service-details-modal-inner">
+            <button type="button" class="service-details-close" id="authorDetailsClose" aria-label="Закрыть">
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="service-details-content">
+                <div class="service-details-left">
+                    <img id="authorDetailsImage" src="" alt="">
+                </div>
+
+                <div class="service-details-right">
+                    <h3 id="authorDetailsTitle">Солнечный круг</h3>
+                    <p class="service-details-main-text">
+                        Это кольцо родилось как попытка остановить мгновение — поймать тот самый тёплый свет летнего заката, который скользит по руке и дарит ощущение покоя и радости. «Солнечный круг» — это не просто украшение, это личный талисман, напоминание о том, что внутри каждого из нас живёт внутренний свет.
+                    </p>
+                    <p class="service-details-cost-title">Подробнее о материалах и исполнение:</p>
+                    <p class="service-details-cost-list">
+                        Кольцо выполнено из драгоценного металла — жёлтого золота 585 пробы. Выбран именно тёплый оттенок золота, так как он идеально имитирует цвет солнечных лучей и обладает наибольшей естественностью, подходя практически к любому цветотипу внешности.<br>
+                        В зависимости от пожелания заказчика, мастер может использовать как классическое гладкое золото с зеркальной полировкой, создающей эффект сияния, так и матовую поверхность, которая делает свет более мягким и рассеянным, словно утренний рассвет.
+                    </p>
+                    <p class="service-details-note author-details-price-title">Стоимость:</p>
+                    <p class="service-details-cost-list">24 900 ₽.</p>
+                    <button type="button" class="service-details-order-btn" id="authorDetailsOrder">заказать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="how-we-work author-can-create">
+        <h2>ЧТО МОЖНО СОЗДАТЬ?</h2>
+        <div class="how-we-work-cards">
+            <article class="how-work-card">
+                <img src="{% static 'main/img/what_can_create/photo1.png' %}" alt="Именные украшения">
+                <p>Именные украшения с буквами, знаками, символами, отпечатками</p>
+            </article>
+
+            <article class="how-work-card">
+                <img src="{% static 'main/img/what_can_create/photo2.png' %}" alt="Украшения с камнями">
+                <p>Украшения с камнями, которые соответствуют вашему знаку зодиака или просто любимому цвету.</p>
+            </article>
+
+            <article class="how-work-card">
+                <img src="{% static 'main/img/what_can_create/photo3.png' %}" alt="Повторение важного силуэта">
+                <p>Повторение важного силуэта: контур дома, гор, лапки питомца, особенный цветок.</p>
+            </article>
+
+            <article class="how-work-card">
+                <img src="{% static 'main/img/what_can_create/photo4.png' %}" alt="Интерпретация вашего дизайна">
+                <p>Интерпретацию вашего дизайна</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="contacts-form-section about-form-section" id="authorJewelryFormSection">
+        <div class="contacts-form-layout">
+            <div class="contacts-form-image">
+                <img src="{% static 'main/img/form/new-form-image.png' %}" alt="Изображение формы">
+            </div>
+            <form class="contacts-form" action="{% url 'author_jewelry' %}" method="post">
+                {% csrf_token %}
+                <h2>Заполните форму</h2>
+                <p class="contacts-form-subtitle">Этот процесс — магия, доступная каждому. Не откладывайте свою идею.</p>
+                <div class="about-form-fields">
+                    <label for="author-question">Опишите Ваш вопрос</label>
+                    <input id="author-question" name="question" type="text" placeholder="Пример: «Хочу восстановить украшение»" required>
+
+                    <label for="author-phone">Ваш контактный телефон</label>
+                    <input id="author-phone" name="phone" type="tel" placeholder="Пример: +7 933 356 87 25" required>
+
+                    <div class="contacts-form-bottom">
+                        <label class="checkbox-row">
+                            <input type="checkbox" name="consent" required>
+                            <span>Я соглашаюсь на обработку моих персональных данных</span>
+                        </label>
+
+                        <button type="submit">отправить форму</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="about-stages author-how-it-works">
+        <h2>КАК ЭТО РАБОТАЕТ?</h2>
+        <div class="about-stages-list">
+            <button type="button" class="about-stage-row is-open" aria-expanded="true">
+                <span class="about-stage-number">01</span>
+                <div class="about-stage-content">
+                    <span class="about-stage-title">ВДОХНОВЕНИЕ</span>
+                    <span class="about-stage-text">Не ищите сложных слов. Достаточно — чувства, образа, памяти. Подумайте, что Вы хотите создать: нежный кулон с тайным смыслом, кольцо, которое смело говорит о вас, или серьги для особого события.</span>
+                </div>
+                <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+            </button>
+
+            <button type="button" class="about-stage-row" aria-expanded="false">
+                <span class="about-stage-number">02</span>
+                <div class="about-stage-content">
+                    <span class="about-stage-title">ЗАПОЛНЯЕТЕ ФОРМУ</span>
+                    <span class="about-stage-text">Ответьте на несколько вопросов, которые помогут нам понять ваше видение. Опишите свою идею несколькими словами или образами (например: «осенний лист клёна», «тишина перед рассветом», «сила гор»). Укажите где с вами можно связаться и в любом удобном вам месандереже мы ответим.</span>
+                </div>
+                <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+            </button>
+
+            <button type="button" class="about-stage-row" aria-expanded="false">
+                <span class="about-stage-number">03</span>
+                <div class="about-stage-content">
+                    <span class="about-stage-title">СОЗДАНИЕ ЭСКИЗА</span>
+                    <span class="about-stage-text">На его основе вы получите цифровой набросок будущего украшения. Обсудим и отточим каждую деталь. Мы вносим правки, пока вы не скажете: «Да, это именно ОНО!». Вы утверждаете финальный вариант.</span>
+                </div>
+                <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+            </button>
+
+            <button type="button" class="about-stage-row" aria-expanded="false">
+                <span class="about-stage-number">04</span>
+                <div class="about-stage-content">
+                    <span class="about-stage-title">РОЖДЕНИЕ ВАШЕГО УКРАШЕНИЯ</span>
+                    <span class="about-stage-text">Когда эскиз утверждён, эстафету принимают наши ювелиры с многолетним опытом. И вот оно - ваше авторское украшение, единственное в мире, готово. Вы его придумали. Мы помогли ему появиться на свет.</span>
+                </div>
+                <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+            </button>
+        </div>
+    </section>
+</main>
+<script>
+    (function () {
+        const accordionItems = document.querySelectorAll('.author-examples .service-accordion-item');
+        accordionItems.forEach((item) => {
+            const toggle = item.querySelector('.service-accordion-toggle');
+            if (!toggle) return;
+            toggle.addEventListener('click', () => {
+                item.classList.toggle('is-open');
+            });
+        });
+
+        const stageRows = document.querySelectorAll('.author-how-it-works .about-stage-row');
+        stageRows.forEach((row) => {
+            row.addEventListener('click', () => {
+                const isOpen = row.classList.contains('is-open');
+                row.classList.toggle('is-open', !isOpen);
+                row.setAttribute('aria-expanded', (!isOpen).toString());
+            });
+        });
+
+        const scrollBtn = document.getElementById('authorJewelryScrollToForm');
+        const formSection = document.getElementById('authorJewelryFormSection');
+        if (scrollBtn && formSection) {
+            scrollBtn.addEventListener('click', () => {
+                formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
+
+        const authorModal = document.getElementById('authorDetailsModal');
+        const authorModalClose = document.getElementById('authorDetailsClose');
+        const authorModalOrder = document.getElementById('authorDetailsOrder');
+        const authorModalImage = document.getElementById('authorDetailsImage');
+
+        function getAuthorCardImage(button) {
+            const serviceCard = button.closest('.service-card');
+            if (serviceCard) {
+                return serviceCard.querySelector('.service-card-image')?.getAttribute('src') || '';
+            }
+
+            const accordionCard = button.closest('.service-accordion-content');
+            if (accordionCard) {
+                return accordionCard.querySelector('.service-accordion-image-wrap img')?.getAttribute('src') || '';
+            }
+
+            return '';
+        }
+
+        function openAuthorModal(imageSrc) {
+            if (!authorModal) return;
+            authorModalImage.src = imageSrc || '';
+            authorModalImage.alt = 'Солнечный круг';
+            authorModal.classList.add('is-open');
+            authorModal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('menu-open');
+        }
+
+        function closeAuthorModal() {
+            if (!authorModal) return;
+            authorModal.classList.remove('is-open');
+            authorModal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('menu-open');
+        }
+
+        document.querySelectorAll('.author-examples .service-card-btn').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                openAuthorModal(getAuthorCardImage(btn));
+            });
+        });
+
+        if (authorModalClose) {
+            authorModalClose.addEventListener('click', closeAuthorModal);
+        }
+
+        if (authorModalOrder && formSection) {
+            authorModalOrder.addEventListener('click', () => {
+                closeAuthorModal();
+                formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
+    })();
+</script>
+{% endblock %}

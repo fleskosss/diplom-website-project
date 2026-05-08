@@ -1,0 +1,720 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Услуги
+{% endblock %}
+
+{% block body_class %}services-page-view{% endblock %}
+
+{% block content %}
+<main>
+    <section class="services-hero">
+        <img class="services-hero-bg" src="{% static 'main/img/services/background.png' %}" alt="">
+        <div class="services-hero-inner">
+            <div class="services-hero-image">
+                <img src="{% static 'main/img/services/image.png' %}" alt="Услуги">
+            </div>
+            <div class="services-hero-text">
+                <h1>УСЛУГИ ПОЧИНКИ</h1>
+                <p>Реставрация и починка украшений — вернём любимым вещам жизнь и блеск.</p>
+                <button type="button" id="servicesScrollToForm">заказать</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-categories">
+        <h2>Услуги</h2>
+        <div class="services-categories-row">
+            <button type="button" class="services-category services-category-btn is-active" data-category="repair">Ремонт и восстановление</button>
+            <span class="services-category-line" aria-hidden="true"></span>
+            <button type="button" class="services-category services-category-btn" data-category="cleaning">Чистка и полировка</button>
+            <span class="services-category-line" aria-hidden="true"></span>
+            <button type="button" class="services-category services-category-btn" data-category="redesign">Реставрация и изменение дизайна</button>
+            <span class="services-category-line" aria-hidden="true"></span>
+            <button type="button" class="services-category services-category-btn" data-category="other">Другие работы</button>
+        </div>
+    </section>
+
+    <section class="services-cards services-cards-desktop">
+        <div class="services-cards-group is-active" data-category="repair">
+        <div class="services-cards-grid">
+            <article class="service-card">
+                <img class="service-card-image" src="{% static 'main/img/services-cards/card1.png' %}" alt="">
+                <h3 class="service-card-title">Восстановление креплений камней</h3>
+                <p class="service-card-desc">Поджатие, замена лапок, ремонт и усиление оправы для бриллиантов и цветных камней</p>
+                <div class="service-card-bottom">
+                    <p class="service-card-price">5500 руб</p>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <img class="service-card-image" src="{% static 'main/img/services-cards/card2.png' %}" alt="">
+                <h3 class="service-card-title">Замена и установка замков-карабинов</h3>
+                <p class="service-card-desc">Устранение разрывов золотых, серебряных, платиновых цепей любой плетенности</p>
+                <div class="service-card-bottom">
+                    <p class="service-card-price">5500 руб</p>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <img class="service-card-image" src="{% static 'main/img/services-cards/card3.png' %}" alt="">
+                <h3 class="service-card-title">Замена утраченных частей</h3>
+                <p class="service-card-desc">Воссоздание и припайка потерянного звена, подвеса</p>
+                <div class="service-card-bottom">
+                    <p class="service-card-price">5500 руб</p>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <img class="service-card-image" src="{% static 'main/img/services-cards/card4.png' %}" alt="">
+                <h3 class="service-card-title">Устранение трещин и разрывов в металле</h3>
+                <p class="service-card-desc">Пайка ободков колец, дуг браслетов, элементов подвесок</p>
+                <div class="service-card-bottom">
+                    <p class="service-card-price">5500 руб</p>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <img class="service-card-image" src="{% static 'main/img/services-cards/card5.png' %}" alt="">
+                <h3 class="service-card-title">Ремонт и замена застежек</h3>
+                <p class="service-card-desc">Шпрингелей, карабинов, коробочек на цепях, браслетах, колье</p>
+                <div class="service-card-bottom">
+                    <p class="service-card-price">5500 руб</p>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <img class="service-card-image" src="{% static 'main/img/services-cards/card5.png' %}" alt="">
+                <h3 class="service-card-title">Ремонт швенз серег</h3>
+                <p class="service-card-desc">Замена/починка английских замков, петелек, штифтов</p>
+                <div class="service-card-bottom">
+                    <p class="service-card-price">5500 руб</p>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+        </div>
+
+        <div class="services-cards-accordion">
+            <article class="service-accordion-item is-open">
+                <button type="button" class="service-accordion-toggle">
+                    <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                    <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                    <span>Восстановление креплений камней</span>
+                </button>
+                <div class="service-accordion-content">
+                    <div class="service-accordion-top">
+                        <div class="service-accordion-image-wrap">
+                            <img src="{% static 'main/img/services-cards/card1.png' %}" alt="">
+                        </div>
+                        <div class="service-accordion-text">
+                            <h3>Восстановление креплений камней</h3>
+                            <p>Поджатие, замена лапок, ремонт и усиление оправы для бриллиантов и цветных камней</p>
+                            <span class="service-accordion-price">5500 руб</span>
+                        </div>
+                    </div>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+
+            <article class="service-accordion-item">
+                <button type="button" class="service-accordion-toggle">
+                    <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                    <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                    <span>Замена и установка замков-карабинов</span>
+                </button>
+                <div class="service-accordion-content">
+                    <div class="service-accordion-top">
+                        <div class="service-accordion-image-wrap">
+                            <img src="{% static 'main/img/services-cards/card2.png' %}" alt="">
+                        </div>
+                        <div class="service-accordion-text">
+                            <h3>Замена и установка замков-карабинов</h3>
+                            <p>Устранение разрывов золотых, серебряных, платиновых цепей любой плетенности</p>
+                            <span class="service-accordion-price">5500 руб</span>
+                        </div>
+                    </div>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+
+            <article class="service-accordion-item">
+                <button type="button" class="service-accordion-toggle">
+                    <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                    <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                    <span>Замена утраченных частей</span>
+                </button>
+                <div class="service-accordion-content">
+                    <div class="service-accordion-top">
+                        <div class="service-accordion-image-wrap">
+                            <img src="{% static 'main/img/services-cards/card3.png' %}" alt="">
+                        </div>
+                        <div class="service-accordion-text">
+                            <h3>Замена утраченных частей</h3>
+                            <p>Воссоздание и припайка потерянного звена, подвеса</p>
+                            <span class="service-accordion-price">5500 руб</span>
+                        </div>
+                    </div>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+
+            <article class="service-accordion-item">
+                <button type="button" class="service-accordion-toggle">
+                    <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                    <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                    <span>Устранение трещин и разрывов в металле</span>
+                </button>
+                <div class="service-accordion-content">
+                    <div class="service-accordion-top">
+                        <div class="service-accordion-image-wrap">
+                            <img src="{% static 'main/img/services-cards/card4.png' %}" alt="">
+                        </div>
+                        <div class="service-accordion-text">
+                            <h3>Устранение трещин и разрывов в металле</h3>
+                            <p>Пайка ободков колец, дуг браслетов, элементов подвесок</p>
+                            <span class="service-accordion-price">5500 руб</span>
+                        </div>
+                    </div>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+
+            <article class="service-accordion-item">
+                <button type="button" class="service-accordion-toggle">
+                    <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                    <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                    <span>Ремонт и замена застежек</span>
+                </button>
+                <div class="service-accordion-content">
+                    <div class="service-accordion-top">
+                        <div class="service-accordion-image-wrap">
+                            <img src="{% static 'main/img/services-cards/card5.png' %}" alt="">
+                        </div>
+                        <div class="service-accordion-text">
+                            <h3>Ремонт и замена застежек</h3>
+                            <p>Шпрингелей, карабинов, коробочек на цепях, браслетах, колье</p>
+                            <span class="service-accordion-price">5500 руб</span>
+                        </div>
+                    </div>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+
+            <article class="service-accordion-item">
+                <button type="button" class="service-accordion-toggle">
+                    <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                    <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                    <span>Ремонт швенз серег</span>
+                </button>
+                <div class="service-accordion-content">
+                    <div class="service-accordion-top">
+                        <div class="service-accordion-image-wrap">
+                            <img src="{% static 'main/img/services-cards/card5.png' %}" alt="">
+                        </div>
+                        <div class="service-accordion-text">
+                            <h3>Ремонт швенз серег</h3>
+                            <p>Замена/починка английских замков, петелек, штифтов</p>
+                            <span class="service-accordion-price">5500 руб</span>
+                        </div>
+                    </div>
+                    <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                </div>
+            </article>
+        </div>
+        </div>
+
+        <div class="services-cards-group" data-category="cleaning">
+            <div class="services-cards-grid">
+                <article class="service-card">
+                    <img class="service-card-image" src="{% static 'main/img/services-cards/card1.png' %}" alt="">
+                    <h3 class="service-card-title">Глубокая чистка и полировка</h3>
+                    <p class="service-card-desc">Удаление окислов и возвращение блеска золотым и серебряным изделиям в ультразвуковой ванне и вручную.</p>
+                    <div class="service-card-bottom">
+                        <p class="service-card-price">от 2500 руб</p>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <img class="service-card-image" src="{% static 'main/img/services-cards/card2.png' %}" alt="">
+                    <h3 class="service-card-title">Чистка цепей и ажурных изделий</h3>
+                    <p class="service-card-desc">Аккуратная очистка труднодоступных звеньев без повреждения плетения.</p>
+                    <div class="service-card-bottom">
+                        <p class="service-card-price">от 1800 руб</p>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <img class="service-card-image" src="{% static 'main/img/services-cards/card3.png' %}" alt="">
+                    <h3 class="service-card-title">Подготовка к особому случаю</h3>
+                    <p class="service-card-desc">Экспресс-полировка и освежение украшений перед мероприятием.</p>
+                    <div class="service-card-bottom">
+                        <p class="service-card-price">от 1500 руб</p>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+            </div>
+            <div class="services-cards-accordion">
+                <article class="service-accordion-item is-open">
+                    <button type="button" class="service-accordion-toggle">
+                        <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                        <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                        <span>Глубокая чистка и полировка</span>
+                    </button>
+                    <div class="service-accordion-content">
+                        <div class="service-accordion-top">
+                            <div class="service-accordion-image-wrap">
+                                <img src="{% static 'main/img/services-cards/card1.png' %}" alt="">
+                            </div>
+                            <div class="service-accordion-text">
+                                <h3>Глубокая чистка и полировка</h3>
+                                <p>Удаление окислов и возвращение блеска золотым и серебряным изделиям в ультразвуковой ванне и вручную.</p>
+                                <span class="service-accordion-price">от 2500 руб</span>
+                            </div>
+                        </div>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+                <article class="service-accordion-item">
+                    <button type="button" class="service-accordion-toggle">
+                        <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                        <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                        <span>Чистка цепей и ажурных изделий</span>
+                    </button>
+                    <div class="service-accordion-content">
+                        <div class="service-accordion-top">
+                            <div class="service-accordion-image-wrap">
+                                <img src="{% static 'main/img/services-cards/card2.png' %}" alt="">
+                            </div>
+                            <div class="service-accordion-text">
+                                <h3>Чистка цепей и ажурных изделий</h3>
+                                <p>Аккуратная очистка труднодоступных звеньев без повреждения плетения.</p>
+                                <span class="service-accordion-price">от 1800 руб</span>
+                            </div>
+                        </div>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+                <article class="service-accordion-item">
+                    <button type="button" class="service-accordion-toggle">
+                        <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                        <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                        <span>Подготовка к особому случаю</span>
+                    </button>
+                    <div class="service-accordion-content">
+                        <div class="service-accordion-top">
+                            <div class="service-accordion-image-wrap">
+                                <img src="{% static 'main/img/services-cards/card3.png' %}" alt="">
+                            </div>
+                            <div class="service-accordion-text">
+                                <h3>Подготовка к особому случаю</h3>
+                                <p>Экспресс-полировка и освежение украшений перед мероприятием.</p>
+                                <span class="service-accordion-price">от 1500 руб</span>
+                            </div>
+                        </div>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="services-cards-group" data-category="redesign">
+            <div class="services-cards-grid">
+                <article class="service-card">
+                    <img class="service-card-image" src="{% static 'main/img/services-cards/card4.png' %}" alt="">
+                    <h3 class="service-card-title">Изменение размера колец</h3>
+                    <p class="service-card-desc">Увеличение или уменьшение обода с сохранением пропорций и узора.</p>
+                    <div class="service-card-bottom">
+                        <p class="service-card-price">от 3500 руб</p>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <img class="service-card-image" src="{% static 'main/img/services-cards/card5.png' %}" alt="">
+                    <h3 class="service-card-title">Обновление и усиление оправы</h3>
+                    <p class="service-card-desc">Модернизация оправы под новые камни или восстановление изношенной конструкции.</p>
+                    <div class="service-card-bottom">
+                        <p class="service-card-price">от 6000 руб</p>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <img class="service-card-image" src="{% static 'main/img/services-cards/card1.png' %}" alt="">
+                    <h3 class="service-card-title">Доработка готового изделия</h3>
+                    <p class="service-card-desc">Добавление элементов, перепайка, изменение формы по вашему эскизу.</p>
+                    <div class="service-card-bottom">
+                        <p class="service-card-price">по оценке</p>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+            </div>
+            <div class="services-cards-accordion">
+                <article class="service-accordion-item is-open">
+                    <button type="button" class="service-accordion-toggle">
+                        <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                        <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                        <span>Изменение размера колец</span>
+                    </button>
+                    <div class="service-accordion-content">
+                        <div class="service-accordion-top">
+                            <div class="service-accordion-image-wrap">
+                                <img src="{% static 'main/img/services-cards/card4.png' %}" alt="">
+                            </div>
+                            <div class="service-accordion-text">
+                                <h3>Изменение размера колец</h3>
+                                <p>Увеличение или уменьшение обода с сохранением пропорций и узора.</p>
+                                <span class="service-accordion-price">от 3500 руб</span>
+                            </div>
+                        </div>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+                <article class="service-accordion-item">
+                    <button type="button" class="service-accordion-toggle">
+                        <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                        <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                        <span>Обновление и усиление оправы</span>
+                    </button>
+                    <div class="service-accordion-content">
+                        <div class="service-accordion-top">
+                            <div class="service-accordion-image-wrap">
+                                <img src="{% static 'main/img/services-cards/card5.png' %}" alt="">
+                            </div>
+                            <div class="service-accordion-text">
+                                <h3>Обновление и усиление оправы</h3>
+                                <p>Модернизация оправы под новые камни или восстановление изношенной конструкции.</p>
+                                <span class="service-accordion-price">от 6000 руб</span>
+                            </div>
+                        </div>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+                <article class="service-accordion-item">
+                    <button type="button" class="service-accordion-toggle">
+                        <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                        <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                        <span>Доработка готового изделия</span>
+                    </button>
+                    <div class="service-accordion-content">
+                        <div class="service-accordion-top">
+                            <div class="service-accordion-image-wrap">
+                                <img src="{% static 'main/img/services-cards/card1.png' %}" alt="">
+                            </div>
+                            <div class="service-accordion-text">
+                                <h3>Доработка готового изделия</h3>
+                                <p>Добавление элементов, перепайка, изменение формы по вашему эскизу.</p>
+                                <span class="service-accordion-price">по оценке</span>
+                            </div>
+                        </div>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="services-cards-group" data-category="other">
+            <div class="services-cards-grid">
+                <article class="service-card">
+                    <img class="service-card-image" src="{% static 'main/img/services-cards/card2.png' %}" alt="">
+                    <h3 class="service-card-title">Гравировка и шлифовка надписей</h3>
+                    <p class="service-card-desc">Нанесение текста, дат и символов на кольца, кулоны и медальоны.</p>
+                    <div class="service-card-bottom">
+                        <p class="service-card-price">от 2000 руб</p>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <img class="service-card-image" src="{% static 'main/img/services-cards/card3.png' %}" alt="">
+                    <h3 class="service-card-title">Родирование и лужение</h3>
+                    <p class="service-card-desc">Покрытие для защиты от царапин и придания оттенка белому или чёрному металлу.</p>
+                    <div class="service-card-bottom">
+                        <p class="service-card-price">от 3200 руб</p>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <img class="service-card-image" src="{% static 'main/img/services-cards/card4.png' %}" alt="">
+                    <h3 class="service-card-title">Оценка и консультация мастера</h3>
+                    <p class="service-card-desc">Осмотр изделия, рекомендации по ремонту и ориентировочная стоимость работ.</p>
+                    <div class="service-card-bottom">
+                        <p class="service-card-price">бесплатно</p>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+            </div>
+            <div class="services-cards-accordion">
+                <article class="service-accordion-item is-open">
+                    <button type="button" class="service-accordion-toggle">
+                        <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                        <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                        <span>Гравировка и шлифовка надписей</span>
+                    </button>
+                    <div class="service-accordion-content">
+                        <div class="service-accordion-top">
+                            <div class="service-accordion-image-wrap">
+                                <img src="{% static 'main/img/services-cards/card2.png' %}" alt="">
+                            </div>
+                            <div class="service-accordion-text">
+                                <h3>Гравировка и шлифовка надписей</h3>
+                                <p>Нанесение текста, дат и символов на кольца, кулоны и медальоны.</p>
+                                <span class="service-accordion-price">от 2000 руб</span>
+                            </div>
+                        </div>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+                <article class="service-accordion-item">
+                    <button type="button" class="service-accordion-toggle">
+                        <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                        <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                        <span>Родирование и лужение</span>
+                    </button>
+                    <div class="service-accordion-content">
+                        <div class="service-accordion-top">
+                            <div class="service-accordion-image-wrap">
+                                <img src="{% static 'main/img/services-cards/card3.png' %}" alt="">
+                            </div>
+                            <div class="service-accordion-text">
+                                <h3>Родирование и лужение</h3>
+                                <p>Покрытие для защиты от царапин и придания оттенка белому или чёрному металлу.</p>
+                                <span class="service-accordion-price">от 3200 руб</span>
+                            </div>
+                        </div>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+                <article class="service-accordion-item">
+                    <button type="button" class="service-accordion-toggle">
+                        <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                        <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                        <span>Оценка и консультация мастера</span>
+                    </button>
+                    <div class="service-accordion-content">
+                        <div class="service-accordion-top">
+                            <div class="service-accordion-image-wrap">
+                                <img src="{% static 'main/img/services-cards/card4.png' %}" alt="">
+                            </div>
+                            <div class="service-accordion-text">
+                                <h3>Оценка и консультация мастера</h3>
+                                <p>Осмотр изделия, рекомендации по ремонту и ориентировочная стоимость работ.</p>
+                                <span class="service-accordion-price">бесплатно</span>
+                            </div>
+                        </div>
+                        <button type="button" class="service-card-btn">посмотреть подробнее</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-cards services-cards-mobile" aria-label="Услуги, мобильная версия">
+        {% include 'main/services-mobile-category-accordion.html' %}
+    </section>
+
+    <section class="contacts-form-section about-form-section" id="servicesFormSection">
+        <div class="contacts-form-layout">
+            <form class="contacts-form" action="{% url 'services' %}" method="post">
+                {% csrf_token %}
+                <h2>Заполните форму</h2>
+                <p class="contacts-form-subtitle">Этот процесс — магия, доступная каждому. Не откладывайте свою идею.</p>
+                <div class="about-form-fields">
+                    <label for="services-phone">Ваш контактный телефон</label>
+                    <input id="services-phone" name="phone" type="tel" placeholder="Пример: +7 933 356 87 25" required>
+
+                    <label for="services-question">Ваш вопрос</label>
+                    <input id="services-question" name="question" type="text" placeholder="Пример: «Хочу отреставрировать бабушкины сережки»" required>
+
+                    <div class="contacts-form-bottom">
+                        <label class="checkbox-row">
+                            <input type="checkbox" name="consent" required>
+                            <span>Я соглашаюсь на обработку моих персональных данных</span>
+                        </label>
+
+                        <button type="submit">отправить форму</button>
+                    </div>
+                </div>
+            </form>
+            <div class="contacts-form-image">
+                <img src="{% static 'main/img/form/services-form-image.png' %}" alt="Изображение формы">
+            </div>
+        </div>
+    </section>
+
+    <section class="how-we-work">
+        <h2>КАК МЫ РАБОТАЕМ?</h2>
+        <div class="how-we-work-cards">
+            <article class="how-work-card">
+                <img src="{% static 'main/img/how_we_works/photo1.png' %}" alt="Прием и диагностика">
+                <h3>1. Прием и диагностика</h3>
+                <p>Бесплатный осмотр, оценка стоимости и сроков.</p>
+            </article>
+
+            <article class="how-work-card">
+                <img src="{% static 'main/img/how_we_works/photo2.png' %}" alt="Согласование и договор">
+                <h3>2. Согласование и договор</h3>
+                <p>Вы видите четкий прайс и план работ</p>
+            </article>
+
+            <article class="how-work-card">
+                <img src="{% static 'main/img/how_we_works/photo3.png' %}" alt="Выполнение в мастерской">
+                <h3>3. Выполнение в мастерской</h3>
+                <p>Каждый этап контролируется мастером</p>
+            </article>
+
+            <article class="how-work-card">
+                <img src="{% static 'main/img/how_we_works/photo4.png' %}" alt="Выдача и гарантия">
+                <h3>4. Выдача и гарантия</h3>
+                <p>Вы получаете обновленное украшение и гарантию на работы</p>
+            </article>
+        </div>
+    </section>
+
+    <div class="service-details-modal" id="serviceDetailsModal" aria-hidden="true">
+        <div class="service-details-modal-inner">
+            <button type="button" class="service-details-close" id="serviceDetailsClose" aria-label="Закрыть">
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="service-details-content">
+                <div class="service-details-left">
+                    <img id="serviceDetailsImage" src="" alt="">
+                </div>
+
+                <div class="service-details-right">
+                    <h3 id="serviceDetailsTitle">Восстановление креплений камней</h3>
+                    <p class="service-details-main-text">
+                        Если камень в вашем кольце или серьгах начал шататься, это прямой сигнал, что креплению требуется внимание. Наши ювелиры профессионально восстанавливают надежную фиксацию, чтобы предотвратить риск потери камня. Мы аккуратно поджимаем ослабевшие лапки, а при необходимости полностью заменяем сломанные. Для более сложных случаев мы выполняем ремонт и усиление самой кастовой оправы, восстанавливая ее целостность. Все работы ведутся с ювелирной точностью под микроскопом, что гарантирует безопасность даже для самых деликатных бриллиантов и цветных камней. После ремонта украшение проходит финальную чистку и полировку.
+                    </p>
+                    <p class="service-details-cost-title">Стоимость:</p>
+                    <p class="service-details-cost-list">Поджатие одного камня — от 300 ₽.<br>Замена одной лапки — от 800 ₽.<br>Ремонт и усиление оправы — от 1200 ₽.</p>
+                    <p class="service-details-note">Точная цена зависит от сложности работы и определяется после диагностики.</p>
+                    <button type="button" class="service-details-order-btn" id="serviceDetailsOrder">заказать услугу</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'main/reviews-section.html' %}
+</main>
+<script>
+    (function () {
+        const scrollBtn = document.getElementById('servicesScrollToForm');
+        const formSection = document.getElementById('servicesFormSection');
+        if (scrollBtn && formSection) {
+            scrollBtn.addEventListener('click', () => {
+                formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
+
+        const categoryButtons = Array.from(document.querySelectorAll('.services-category-btn'));
+        const cardGroups = Array.from(document.querySelectorAll('.services-cards-group'));
+        if (categoryButtons.length && cardGroups.length) {
+            function setServicesCategory(key) {
+                categoryButtons.forEach((btn) => btn.classList.toggle('is-active', btn.dataset.category === key));
+                cardGroups.forEach((group) => group.classList.toggle('is-active', group.dataset.category === key));
+            }
+            categoryButtons.forEach((btn) => {
+                btn.addEventListener('click', () => setServicesCategory(btn.dataset.category));
+            });
+        }
+
+        document.querySelectorAll('.service-accordion-item').forEach((item) => {
+            if (item.closest('.services-mobile-category-accordion')) return;
+            const toggle = item.querySelector('.service-accordion-toggle');
+            if (!toggle) return;
+            toggle.addEventListener('click', () => {
+                item.classList.toggle('is-open');
+            });
+        });
+
+        const mobileCatItems = Array.from(document.querySelectorAll('.services-mobile-category-accordion .service-category-accordion-item'));
+        mobileCatItems.forEach((item) => {
+            const toggle = item.querySelector('.service-category-accordion-toggle');
+            if (!toggle) return;
+            toggle.addEventListener('click', () => {
+                const wasOpen = item.classList.contains('is-open');
+                mobileCatItems.forEach((i) => i.classList.remove('is-open'));
+                item.classList.toggle('is-open', !wasOpen);
+            });
+        });
+
+        const detailsModal = document.getElementById('serviceDetailsModal');
+        const detailsClose = document.getElementById('serviceDetailsClose');
+        const detailsOrderBtn = document.getElementById('serviceDetailsOrder');
+        const detailsImage = document.getElementById('serviceDetailsImage');
+        const detailsTitle = document.getElementById('serviceDetailsTitle');
+        const detailsText = 'Если камень в вашем кольце или серьгах начал шататься, это прямой сигнал, что креплению требуется внимание. Наши ювелиры профессионально восстанавливают надежную фиксацию, чтобы предотвратить риск потери камня. Мы аккуратно поджимаем ослабевшие лапки, а при необходимости полностью заменяем сломанные. Для более сложных случаев мы выполняем ремонт и усиление самой кастовой оправы, восстанавливая ее целостность. Все работы ведутся с ювелирной точностью под микроскопом, что гарантирует безопасность даже для самых деликатных бриллиантов и цветных камней. После ремонта украшение проходит финальную чистку и полировку.';
+        const detailsMainText = detailsModal ? detailsModal.querySelector('.service-details-main-text') : null;
+
+        if (detailsMainText) {
+            detailsMainText.textContent = detailsText;
+        }
+
+        function getCardData(button) {
+            const serviceCard = button.closest('.service-card');
+            if (serviceCard) {
+                const title = serviceCard.querySelector('.service-card-title')?.textContent?.trim() || '';
+                const image = serviceCard.querySelector('.service-card-image')?.getAttribute('src') || '';
+                return { title, image };
+            }
+
+            const mobileCard = button.closest('.services-mobile-service-card');
+            if (mobileCard) {
+                const title = mobileCard.querySelector('.service-accordion-text h3')?.textContent?.trim() || '';
+                const image = mobileCard.querySelector('.service-accordion-image-wrap img')?.getAttribute('src') || '';
+                return { title, image };
+            }
+
+            const accordionCard = button.closest('.service-accordion-content');
+            if (accordionCard) {
+                const title = accordionCard.querySelector('.service-accordion-text h3')?.textContent?.trim() || '';
+                const image = accordionCard.querySelector('.service-accordion-image-wrap img')?.getAttribute('src') || '';
+                return { title, image };
+            }
+
+            return null;
+        }
+
+        function openDetails(data) {
+            if (!detailsModal || !data) return;
+            detailsTitle.textContent = data.title || 'Восстановление креплений камней';
+            detailsImage.src = data.image || '';
+            detailsImage.alt = data.title || 'Услуга';
+            detailsModal.classList.add('is-open');
+            detailsModal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('menu-open');
+        }
+
+        function closeDetails() {
+            if (!detailsModal) return;
+            detailsModal.classList.remove('is-open');
+            detailsModal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('menu-open');
+        }
+
+        document.querySelectorAll('.service-card-btn').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const data = getCardData(btn);
+                openDetails(data);
+            });
+        });
+
+        if (detailsClose) {
+            detailsClose.addEventListener('click', closeDetails);
+        }
+
+        if (detailsOrderBtn && formSection) {
+            detailsOrderBtn.addEventListener('click', () => {
+                closeDetails();
+                formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
+    })();
+</script>
+{% endblock %}

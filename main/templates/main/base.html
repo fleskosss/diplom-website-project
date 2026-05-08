@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="{% block body_class %}{% endblock %}">
+
+    {% include 'main/navbar.html' %}
+
+    {% if messages %}
+        <div class="toast-messages">
+            {% for message in messages %}
+                <div class="toast-message {% if message.tags %}toast-{{ message.tags }}{% endif %}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include 'main/footer.html' %}
+
+    <script src="{% static 'main/form-validation.js' %}"></script>
+    <script src="{% static 'main/scroll-reveal.js' %}"></script>
+
+    {% block extra_scripts %}
+    {% endblock %}
+</body>
+</html>

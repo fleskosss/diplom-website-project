@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в админ-панель</title>
+    <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+</head>
+<body class="admin-login-page">
+    <main class="admin-login">
+        <section class="admin-login-card">
+            <h1>АДМИН ПАНЕЛЬ</h1>
+            <form method="post">
+                {% csrf_token %}
+                <div class="admin-input-wrap">
+                    {{ form.username }}
+                    {% if form.username.errors %}
+                        <span class="admin-error">{{ form.username.errors.0 }}</span>
+                    {% endif %}
+                </div>
+                <div class="admin-input-wrap">
+                    {{ form.password }}
+                    {% if form.password.errors %}
+                        <span class="admin-error">{{ form.password.errors.0 }}</span>
+                    {% endif %}
+                </div>
+                {% if form.non_field_errors %}
+                    <span class="admin-error">{{ form.non_field_errors.0 }}</span>
+                {% endif %}
+                <button type="submit">Отправить форму</button>
+            </form>
+        </section>
+    </main>
+    <script src="{% static 'main/form-validation.js' %}"></script>
+</body>
+</html>

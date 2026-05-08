@@ -1,0 +1,45 @@
+{% load static %}
+<footer class="footer">
+    <div class="top-footer">
+        <a href="/" class="logo-text">
+            JDANOV & CO
+        </a>
+        <div class="right-column">
+            <div class="nav-block" id="SocialNetworks">
+                <div class="nav-header">
+                    <span>социальные сети</span>
+                </div>
+                <div class="nav-body">
+                    <a href="#" class="social-network-icon">
+                        <img src="{% static 'main/icons/instagram.svg' %}" alt="">
+                    </a>
+                    <a href="#" class="social-network-icon">
+                        <img src="{% static 'main/icons/telegram.svg' %}" alt="">
+                    </a>
+                    <a href="#" class="social-network-icon">
+                        <img src="{% static 'main/icons/vk.svg' %}" alt="">
+                    </a>
+                    <a href="#" class="social-network-icon">
+                        <img src="{% static 'main/icons/max.svg' %}" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="nav-block" id="NavPagesButtons">
+                <div class="nav-header">
+                    <span>страницы</span>
+                </div>
+                <div class="nav-body">
+                    <a href="/">Главная</a>
+                    <a href="/services">Услуги</a>
+                    <a href="/advices">Советы</a>
+                    <a href="/about">О нас</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-footer">
+        <a href="{% url 'privacy_policy' %}">Политика конфиденциальности</a>
+        <span>ООО ЖДАНОВ</span>
+        <a href="{% url 'public_offer' %}">Договор публичной оферты</a>
+    </div>
+</footer>

@@ -1,0 +1,79 @@
+{% load static %}
+{% url 'about' as nav_about %}
+{% url 'services' as nav_services %}
+{% url 'author_jewelry' as nav_author_jewelry %}
+{% url 'advices' as nav_advices %}
+{% url 'contacts' as nav_contacts %}
+<nav class="navbar">
+    <a href="/" id="LogoButton">
+        <img src="{% static 'main/img/logo.svg' %}" alt="logo">
+    </a>
+    <button class="navbar-burger" id="navbarBurger" type="button" aria-label="Открыть меню">
+        <img src="{% static 'main/icons/burger-menu.svg' %}" alt="Меню">
+    </button>
+    <div id="NavButtons">
+        <button class="navbar-menu-close" id="navbarMenuClose" type="button" aria-label="Закрыть меню">
+            <span></span>
+            <span></span>
+        </button>
+
+        <a href="/" class="navbar-mobile-logo">
+            <img src="{% static 'main/img/logo.svg' %}" alt="logo">
+        </a>
+
+        <div class="navbar-mobile-links">
+            <a href="{{ nav_about }}"{% if request.path == nav_about %} class="nav-link-active"{% endif %}>О нас</a>
+            <a href="{{ nav_services }}"{% if request.path == nav_services %} class="nav-link-active"{% endif %}>Услуги</a>
+            <a href="{{ nav_author_jewelry }}"{% if request.path == nav_author_jewelry %} class="nav-link-active"{% endif %}>Авторские украшения</a>
+            <a href="{{ nav_advices }}"{% if request.path == nav_advices %} class="nav-link-active"{% endif %}>Советы</a>
+            <a href="{{ nav_contacts }}"{% if request.path == nav_contacts %} class="nav-link-active"{% endif %}>Контакты</a>
+        </div>
+
+        <div class="navbar-mobile-socials">
+            <a href="#" aria-label="Instagram"><img src="{% static 'main/icons/instagram.svg' %}" alt="Instagram"></a>
+            <a href="#" aria-label="Telegram"><img src="{% static 'main/icons/telegram.svg' %}" alt="Telegram"></a>
+            <a href="#" aria-label="VK"><img src="{% static 'main/icons/vk.svg' %}" alt="VK"></a>
+            <a href="#" aria-label="MAX"><img src="{% static 'main/icons/max.svg' %}" alt="MAX"></a>
+        </div>
+
+        <div class="navbar-mobile-bottom">
+            <div class="navbar-mobile-address">Санкт-Петербург,<br/>ул Родищева 35В</div>
+            <a class="navbar-mobile-phone" href="tel:+79217444098">+7 921 744 40 98</a>
+        </div>
+    </div>
+</nav>
+<script>
+    (function () {
+        const burger = document.getElementById('navbarBurger');
+        const closeBtn = document.getElementById('navbarMenuClose');
+        const navbar = document.querySelector('.navbar');
+        if (!burger || !navbar) return;
+
+        function setMenuState(open) {
+            navbar.classList.toggle('open', open);
+            document.body.classList.toggle('menu-open', open);
+        }
+
+        burger.addEventListener('click', function () {
+            setMenuState(true);
+        });
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function () {
+                setMenuState(false);
+            });
+        }
+
+        navbar.querySelectorAll('#NavButtons a').forEach((link) => {
+            link.addEventListener('click', function () {
+                setMenuState(false);
+            });
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                setMenuState(false);
+            }
+        });
+    })();
+</script>

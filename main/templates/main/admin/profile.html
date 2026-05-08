@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль админа</title>
+    <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+</head>
+<body class="admin-panel-page">
+    <div class="admin-layout">
+        <aside class="admin-sidebar" id="adminSidebar">
+            <div class="admin-sidebar-header">
+                <span>Меню</span>
+            </div>
+            <nav class="admin-menu">
+                <a href="{% url 'admin_profile' %}" class="active">Профиль</a>
+            </nav>
+            <div class="admin-sidebar-bottom">
+                <a href="{% url 'admin_logout' %}" class="logout-btn">Выйти</a>
+            </div>
+        </aside>
+
+        <div class="admin-content-wrap">
+            <header class="admin-topbar">
+                <button class="admin-menu-toggle" type="button" id="menuToggle" aria-label="Открыть меню">
+                    <span></span><span></span><span></span>
+                </button>
+                <h1>Профиль</h1>
+            </header>
+
+            <main class="admin-content">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="admin-message">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+                <section class="profile-card">
+                    <form method="post" enctype="multipart/form-data" class="profile-form">
+                        {% csrf_token %}
+                        <div class="avatar-row">
+                            <div class="avatar-preview">
+                                {% if profile.avatar %}
+                                    <img src="{{ profile.avatar.url }}" alt="Аватар">
+                                {% else %}
+                                    <span>{{ request.user.username|slice:":1"|upper }}</span>
+                                {% endif %}
+                            </div>
+                            <div class="field-group">
+                                <label for="{{ form.avatar.id_for_label }}">Сменить аватар</label>
+                                {{ form.avatar }}
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="{{ form.first_name.id_for_label }}">Имя</label>
+                            {{ form.first_name }}
+                        </div>
+                        <div class="field-group">
+                            <label for="{{ form.email.id_for_label }}">Эл. почта</label>
+                            {{ form.email }}
+                        </div>
+                        <div class="field-group">
+                            <label for="{{ form.password.id_for_label }}">Новый пароль</label>
+                            {{ form.password }}
+                        </div>
+                        <div class="field-group">
+                            <label for="{{ form.password_confirm.id_for_label }}">Повторите пароль</label>
+                            {{ form.password_confirm }}
+                        </div>
+                        {% if form.errors %}
+                            <div class="admin-error">Проверьте поля формы и попробуйте снова.</div>
+                        {% endif %}
+                        <button type="submit" class="profile-save-btn">Сохранить изменения</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="{% static 'main/form-validation.js' %}"></script>
+    <script>
+        const toggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('adminSidebar');
+        toggle.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

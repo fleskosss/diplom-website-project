@@ -1,0 +1,227 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+О нас
+{% endblock %}
+
+{% block body_class %}about-page-view{% endblock %}
+
+{% block content %}
+<main>
+    <section class="about-page">
+        <h1>О нас</h1>
+        <div class="about-layout">
+            <div class="about-content">
+                <div class="about-main">
+                    <h2>Информация</h2>
+                    <p class="about-description">
+                        В нашей мастерской нет места конвейеру.
+                        Каждое кольцо, подвеска или серьги проходят длинный путь: от искры идеи в беседе с вами
+                        и карандашного наброска до кропотливой ручной работы мастера.
+                    </p>
+                    <div class="about-divider"></div>
+                </div>
+
+                <div class="about-cta">
+                    <p>
+                        Хотите отреставрировать украшение или создать своё уникальное?
+                        Заполните форму, и мы с вами свяжемся.
+                    </p>
+                    <button type="button" id="aboutScrollToForm">записаться</button>
+                </div>
+            </div>
+
+            <div class="about-image">
+                <img src="{% static 'main/img/about_us/about_us_image.png' %}" alt="О нас">
+            </div>
+        </div>
+    </section>
+
+    <section class="about-why">
+        <h2>ПОЧЕМУ ВЫБИРАЮТ НАС?</h2>
+        <div class="about-why-cards">
+            <div class="about-why-card">
+                <span class="about-why-title">Создаем с нуля под вас</span>
+                <span class="about-why-text">От вашей идеи до готового украшения. Полная кастомизация дизайна, камней и гравировки.</span>
+            </div>
+            <div class="about-why-card">
+                <span class="about-why-title">Пожизненная гарантия и сервис</span>
+                <span class="about-why-text">От вашей идеи до готового украшения. Полная кастомизация дизайна, камней и гравировки.</span>
+            </div>
+            <div class="about-why-card">
+                <span class="about-why-title">Опыт, которому доверяют</span>
+                <span class="about-why-text">От вашей идеи до готового украшения. Полная кастомизация дизайна, камней и гравировки.</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-stages">
+        <h2>ЭТАПЫ ПРОИЗВОДСТВА</h2>
+        <div class="about-stages-list">
+            <button type="button" class="about-stage-row is-open" aria-expanded="true">
+                <span class="about-stage-number">01</span>
+                <div class="about-stage-content">
+                    <span class="about-stage-title">Идея и эскиз</span>
+                    <span class="about-stage-text">Вы делитесь мечтой, мы воплощаем ее в первые линии. Вместе обсуждаем каждую деталь.Вы делитесь мечтой, мы воплощаем ее в первые линии. Вместе обсуждаем каждую деталь.</span>
+                </div>
+                <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+            </button>
+
+            <button type="button" class="about-stage-row" aria-expanded="false">
+                <span class="about-stage-number">02</span>
+                <div class="about-stage-content">
+                    <span class="about-stage-title">3D-моделирование</span>
+                    <span class="about-stage-text">Вы делитесь мечтой, мы воплощаем ее в первые линии. Вместе обсуждаем каждую деталь.Вы делитесь мечтой, мы воплощаем ее в первые линии. Вместе обсуждаем каждую деталь.</span>
+                </div>
+                <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+            </button>
+
+            <button type="button" class="about-stage-row" aria-expanded="false">
+                <span class="about-stage-number">03</span>
+                <div class="about-stage-content">
+                    <span class="about-stage-title">Восковая модель и литье</span>
+                    <span class="about-stage-text">Вы делитесь мечтой, мы воплощаем ее в первые линии. Вместе обсуждаем каждую деталь.Вы делитесь мечтой, мы воплощаем ее в первые линии. Вместе обсуждаем каждую деталь.</span>
+                </div>
+                <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+            </button>
+
+            <button type="button" class="about-stage-row" aria-expanded="false">
+                <span class="about-stage-number">04</span>
+                <div class="about-stage-content">
+                    <span class="about-stage-title">Ручное ИЗГОТОВЛЕНИЕ</span>
+                    <span class="about-stage-text">Вы делитесь мечтой, мы воплощаем ее в первые линии. Вместе обсуждаем каждую деталь.Вы делитесь мечтой, мы воплощаем ее в первые линии. Вместе обсуждаем каждую деталь.</span>
+                </div>
+                <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+            </button>
+
+            <button type="button" class="about-stage-row" aria-expanded="false">
+                <span class="about-stage-number">05</span>
+                <div class="about-stage-content">
+                    <span class="about-stage-title">Полировка и финальный контроль</span>
+                    <span class="about-stage-text">Вы делитесь мечтой, мы воплощаем ее в первые линии. Вместе обсуждаем каждую деталь.Вы делитесь мечтой, мы воплощаем ее в первые линии. Вместе обсуждаем каждую деталь.</span>
+                </div>
+                <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+            </button>
+        </div>
+    </section>
+
+    <section class="contacts-form-section about-form-section" id="aboutFormSection">
+        <div class="contacts-form-layout">
+            <div class="contacts-form-image">
+                <img src="{% static 'main/img/form/new-form-image.png' %}" alt="Изображение формы">
+            </div>
+            <form class="contacts-form" action="{% url 'about' %}" method="post">
+                {% csrf_token %}
+                <h2>Заполните форму</h2>
+                <p class="contacts-form-subtitle">Этот процесс — магия, доступная каждому. Не откладывайте свою идею.</p>
+                <div class="about-form-fields">
+                    <label for="about-question">Опишите Ваш вопрос</label>
+                    <input id="about-question" name="question" type="text" placeholder="Пример: «Хочу восстановить украшение»" required>
+
+                    <label for="about-phone">Ваш контактный телефон</label>
+                    <input id="about-phone" name="phone" type="tel" placeholder="Пример: +7 933 356 87 25" required>
+
+                    <div class="contacts-form-bottom">
+                        <label class="checkbox-row">
+                            <input type="checkbox" name="consent" required>
+                            <span>Я соглашаюсь на обработку моих персональных данных</span>
+                        </label>
+
+                        <button type="submit">отправить форму</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="created-jewelry">
+        <h2>СОЗДАНЫЕ УКРАШЕННИЯ</h2>
+        <div class="created-jewelry-content">
+            <div class="created-row">
+                <div class="created-image">
+                    <img src="{% static 'main/img/created_jews/created_jew1.png' %}" alt="Созданное украшение 1">
+                </div>
+                <div class="created-image">
+                    <img src="{% static 'main/img/created_jews/created_jew2.png' %}" alt="Созданное украшение 2">
+                </div>
+                <div class="created-text-block">
+                    <h3>В унисон</h3>
+                    <p>В мастерскую буквально вбежала пара: до свадьбы остались считанные дни, а те самые кольца так и не были найдены. Они мечтали не о масс-маркете, а о чем-то глубоко личном, отражающем их общие смыслы и характер. В кратчайшие сроки мы создали уникальный сет, который успел к церемонии и стал для влюбленных символом их решительности и единства.</p>
+                </div>
+            </div>
+
+            <div class="created-row">
+                <div class="created-text-block">
+                    <h3>Эхо памяти</h3>
+                    <p>Эти серьги — не просто золото, а живая история, которую когда-то носила бабушка нашей заказчицы на самые важные свидания. Нашей задачей было обновить старинную конструкцию и крепления, сохранив при этом аутентичный шарм винтажного изделия.</p>
+                </div>
+                <div class="created-image">
+                    <img src="{% static 'main/img/created_jews/created_jew3.png' %}" alt="Созданное украшение 3">
+                </div>
+                <div class="created-text-block no-divider">
+                    <h3>Её отражение</h3>
+                    <p>Молодой человек поставил перед нами сложную, но вдохновляющую задачу: создать кольцо, которое стало бы ювелирным портретом его девушки. Мы долго обсуждали её стиль, увлечения и даже любимые ароматы, чтобы переложить эти черты в изящные линии металла и выбор камня.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="created-jewelry-content-mobile">
+            <div class="created-mobile-item">
+                <div class="created-image">
+                    <img src="{% static 'main/img/created_jews/created_jew1.png' %}" alt="Созданное украшение 1">
+                </div>
+                <div class="created-text-block">
+                    <h3>Эхо памяти</h3>
+                    <p>Эти серьги — не просто золото, а живая история, которую когда-то носила бабушка нашей заказчицы на самые важные свидания. Нашей задачей было обновить старинную конструкцию и крепления, сохранив при этом аутентичный шарм винтажного изделия.</p>
+                </div>
+            </div>
+
+            <div class="created-mobile-item">
+                <div class="created-image">
+                    <img src="{% static 'main/img/created_jews/created_jew2.png' %}" alt="Созданное украшение 2">
+                </div>
+                <div class="created-text-block">
+                    <h3>В унисон</h3>
+                    <p>В мастерскую буквально вбежала пара: до свадьбы остались считанные дни, а те самые кольца так и не были найдены. Они мечтали не о масс-маркете, а о чем-то глубоко личном, отражающем их общие смыслы и характер. В кратчайшие сроки мы создали уникальный сет, который успел к церемонии и стал для влюбленных символом их решительности и единства.</p>
+                </div>
+            </div>
+
+            <div class="created-mobile-item">
+                <div class="created-image">
+                    <img src="{% static 'main/img/created_jews/created_jew3.png' %}" alt="Созданное украшение 3">
+                </div>
+                <div class="created-text-block no-divider">
+                    <h3>Её отражение</h3>
+                    <p>Молодой человек поставил перед нами сложную, но вдохновляющую задачу: создать кольцо, которое стало бы ювелирным портретом его девушки. Мы долго обсуждали её стиль, увлечения и даже любимые ароматы, чтобы переложить эти черты в изящные линии металла и выбор камня.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script>
+    (function () {
+        const rows = document.querySelectorAll('.about-stage-row');
+        rows.forEach((row) => {
+            row.addEventListener('click', () => {
+                const isOpen = row.classList.contains('is-open');
+                row.classList.toggle('is-open', !isOpen);
+                row.setAttribute('aria-expanded', (!isOpen).toString());
+            });
+        });
+
+        const scrollBtn = document.getElementById('aboutScrollToForm');
+        const formSection = document.getElementById('aboutFormSection');
+        if (scrollBtn && formSection) {
+            scrollBtn.addEventListener('click', () => {
+                formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
+    })();
+</script>
+{% endblock %}

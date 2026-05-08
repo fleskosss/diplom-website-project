@@ -1,0 +1,396 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Главная
+{% endblock %}
+
+{% block body_class %}home-page{% endblock %}
+
+{% block content %}
+<main>
+    <!-- Block #1 -->
+    <div class="info-block" id="Block1">
+        <!-- #TODO: Slider -->
+        <picture>
+            <source media="(max-width: 768px)" srcset="{% static 'main/img/jew-mobile-1.png' %}">
+            <img src="{% static 'main/img/jew-1.png' %}" alt="jew1">
+        </picture>
+        <div class="text-info">
+            <div class="text-info-block">
+                <span class="title-text">Информация</span>
+                <span class="body-text">
+                    Мы создаём авторские украшения ручной работы, которые становятся частью вашей личной истории. От первого эскиза до готового изделия — всё пропитано смыслом, вниманием к деталям и верой в то, что настоящее ювелирное искусство вечно.
+                </span>
+            </div>
+            <div class="block-separator"></div>
+            <div class="text-info-block">
+                <span class="title-text">Что делаем?</span>
+                <span class="body-text">
+                    Мы специализируется на двух главных направлениях: ремонте и реставрации , а также на создании эксклюзивных авторских украшений.
+                </span>
+            </div>
+            <button type="button" class="text-info-button home-author-link-btn">подобрать укарашение</button>
+        </div>
+    </div>
+
+
+    <!-- Block #2 -->
+    <div class="info-block" id="Block2">
+        <h2>Портфолио</h2>
+        <div class="grid">
+            <div class="item-col">
+                <img class="portfolio-img portfolio-img-1" src="{% static 'main/img/portfolio_jews/p-jew-1.png' %}" alt="">
+                <img class="portfolio-img portfolio-img-2" src="{% static 'main/img/portfolio_jews/p-jew-2.png' %}" alt="">
+            </div>
+            <div class="item-col">
+                <div class="item-row">
+                    <img class="portfolio-img portfolio-img-3" src="{% static 'main/img/portfolio_jews/p-jew-3.png' %}" alt="">
+                    <img class="portfolio-img portfolio-img-5" src="{% static 'main/img/portfolio_jews/p-jew-5.png' %}" alt="">
+                </div>
+                <div class="item-row">
+                    <div class="item-col">
+                        <img class="portfolio-img portfolio-img-4" src="{% static 'main/img/portfolio_jews/p-jew-4.png' %}" alt="">
+                    </div>
+                    <div class="item-col">
+                        <img class="portfolio-img portfolio-img-6" src="{% static 'main/img/portfolio_jews/p-jew-6.png' %}" alt="">
+                        <img class="portfolio-img portfolio-img-7" src="{% static 'main/img/portfolio_jews/p-jew-7.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="item-col">
+                <img class="portfolio-img portfolio-img-8" src="{% static 'main/img/portfolio_jews/p-jew-8.png' %}" alt="">
+            </div>
+        </div>
+        <div class="portfolio-slider" id="portfolioSlider">
+            <div class="portfolio-slider-track">
+                <div class="portfolio-slide"><img src="{% static 'main/img/portfolio_jews/p-jew-1.png' %}" alt=""></div>
+                <div class="portfolio-slide"><img src="{% static 'main/img/portfolio_jews/p-jew-2.png' %}" alt=""></div>
+                <div class="portfolio-slide"><img src="{% static 'main/img/portfolio_jews/p-jew-3.png' %}" alt=""></div>
+                <div class="portfolio-slide"><img src="{% static 'main/img/portfolio_jews/p-jew-4.png' %}" alt=""></div>
+                <div class="portfolio-slide"><img src="{% static 'main/img/portfolio_jews/p-jew-5.png' %}" alt=""></div>
+                <div class="portfolio-slide"><img src="{% static 'main/img/portfolio_jews/p-jew-6.png' %}" alt=""></div>
+                <div class="portfolio-slide"><img src="{% static 'main/img/portfolio_jews/p-jew-7.png' %}" alt=""></div>
+                <div class="portfolio-slide"><img src="{% static 'main/img/portfolio_jews/p-jew-8.png' %}" alt=""></div>
+            </div>
+            <div class="portfolio-slider-controls">
+                <button type="button" id="portfolioPrev" aria-label="Предыдущее фото">&#8592;</button>
+                <button type="button" id="portfolioNext" aria-label="Следующее фото">&#8594;</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Block #3 -->
+    <div class="info-block" id="Block3">
+        <h2>Преимущества</h2>
+        <div class="cells">
+            <!-- Cell 1 -->
+            <div class="info-cell">
+                <span class="title-text">
+                    Украшения только для вас
+                </span>
+                <span class="desc-text">
+                    Создаём изделия с нуля  под вашу историю, стиль и идею.
+                </span>
+            </div>
+
+            <!-- Cell 2 -->
+            <div class="info-cell">
+                <span class="title-text">
+                    Гарантия навсегда
+                </span>
+                <span class="desc-text">
+                    Отвечаем за изделие на весь срок его жизни.
+                </span>
+            </div>
+
+            <!-- Cell 3 -->
+            <div class="info-cell">
+                <span class="title-text">
+                    Честные материалы
+                </span>
+                <span class="desc-text">
+                    Используем только проверенные металлы и камни
+                </span>
+            </div>
+
+            <!-- Cell 4 -->
+            <div class="info-cell">
+                <span class="title-text">
+                    Диалог с мастером
+                </span>
+                <span class="desc-text">
+                    Прямое общение с ювелиром — от идеи до результата.
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Block #4 -->
+    <div class="info-block" id="Block4">
+        <h2>МЫ СОЗДАЕМ</h2>
+        <div class="item-cards">
+            <div class="i-card">
+                <div class="i-card-image">
+                    <img src="{% static 'main/img/we_create_images/image1.png' %}" alt="">
+                </div>
+                <div class="i-card-name">
+                    <span>Серьги</span>
+                    <div class="name-line"></div>
+                </div>
+            </div>
+
+            <div class="i-card">
+                <div class="i-card-image">
+                    <img src="{% static 'main/img/we_create_images/image2.png' %}" alt="">
+                </div>
+                <div class="i-card-name">
+                    <span>Кольца</span>
+                    <div class="name-line"></div>
+                </div>
+            </div>
+
+            <div class="i-card">
+                <div class="i-card-image">
+                    <img src="{% static 'main/img/we_create_images/image3.png' %}" alt="">
+                </div>
+                <div class="i-card-name">
+                    <span>Ожерелья</span>
+                    <div class="name-line"></div>
+                </div>
+            </div>
+
+            <div class="i-card">
+                <div class="i-card-image">
+                    <img src="{% static 'main/img/we_create_images/image4.png' %}" alt="">
+                </div>
+                <div class="i-card-name">
+                    <span>Браслеты</span>
+                    <div class="name-line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-info">
+            <div class="bottom-info-text">
+                <span>Изучите нашу коллекцию, чтобы выбрать украшение своей мечты или найти идею для своего уникального проекта.</span>
+            </div>
+            <button type="button" class="home-author-link-btn">подобрать украшение</button>
+        </div>
+    </div>
+
+
+    <!-- Block #5 -->
+    <div class="info-block" id="Block5">
+        <h2>СОВЕТЫ И ИССЛЕДОВАНИЯ</h2>
+        <div class="tip-cards">
+
+            <div class="tip">
+                <div class="tip-image">
+                    <img src="{% static 'main/img/tips/tip1.png' %}" alt="">
+                </div>
+                <div class="tip-desc">
+                    <span class="tip-title">Искусство заботы: Как сохранить блеск ваших золотых и серебряных украшений на долгие годы</span>
+                    <span class="tip-text">От чистого золота до серебра — гид по чистке ваших украшений, чтобы свестти к минимуму необходимость в глубокой чистке</span>
+                    <button>читать подробнее</button>
+                </div>
+            </div>
+
+            <div class="tip">
+                <div class="tip-image">
+                    <img src="{% static 'main/img/tips/tip2.png' %}" alt="">
+                </div>
+                <div class="tip-desc">
+                    <span class="tip-title">Верните блеск за минуту: Как безопасно удалить темные пятна с цепочек и звеньев</span>
+                    <span class="tip-text">Пошаговая инструкция по чистке труднодоступных мест на цепочках, браслетах-панцирях и ажурных серьгах, где чаще всего скапливается грязь.</span>
+                    <button>читать подробнее</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Block #6 -->
+    <div class="info-block" id="Block6">
+        <h2>ОТЗЫВЫ</h2>
+        <div class="reviews">
+            <div class="reviews-row">
+                
+                <div class="review">
+                    <div class="review-image">
+                        <img src="{% static 'main/img/reviews/review1.png' %}" alt="">
+                    </div>
+                    <div class="review-owner">
+                        <div class="review-owner-name">
+                            <span class="name">Екатерина</span>
+                            <span class="date">20.10.2025</span>
+                        </div>
+                        <div class="review-stars">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <span>Спасибо за новое украшение!<br/>Ношу его везде</span>
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="review-image">
+                        <img src="{% static 'main/img/reviews/review2.png' %}" alt="">
+                    </div>
+                    <div class="review-owner">
+                        <div class="review-owner-name">
+                            <span class="name">София Калугина</span>
+                            <span class="date">20.10.2025</span>
+                        </div>
+                        <div class="review-stars">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <span>Быстрый, качественный ремонт ювелирных изделий!<br/>Всегда аккуратно, без следа поломки.</span>
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="review-image">
+                        <img src="{% static 'main/img/reviews/review3.png' %}" alt="">
+                    </div>
+                    <div class="review-owner">
+                        <div class="review-owner-name">
+                            <span class="name">Ева Переносова</span>
+                            <span class="date">20.10.2025</span>
+                        </div>
+                        <div class="review-stars">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <span>Порвался браслет и одно звено потерялось.<br/>Мастер отремонтировал браслет качественно и быстро.</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="reviews-row">
+                
+                <div class="review">
+                    <div class="review-image">
+                        <img src="{% static 'main/img/reviews/review4.png' %}" alt="">
+                    </div>
+                    <div class="review-owner">
+                        <div class="review-owner-name">
+                            <span class="name">Мария</span>
+                            <span class="date">20.10.2025</span>
+                        </div>
+                        <div class="review-stars">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <span>Только положительные впечатления. Необходимо было вставить новые камни в кольцо. Быстро и качественно.</span>
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="review-image">
+                        <img src="{% static 'main/img/reviews/review5.png' %}" alt="">
+                    </div>
+                    <div class="review-owner">
+                        <div class="review-owner-name">
+                            <span class="name">Полина Г.</span>
+                            <span class="date">20.10.2025</span>
+                        </div>
+                        <div class="review-stars">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <span>Работа выполнена прекрасно и по хорошей цене. Рекомендую!</span>
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="review-image">
+                        <img src="{% static 'main/img/reviews/review6.png' %}" alt="">
+                    </div>
+                    <div class="review-owner">
+                        <div class="review-owner-name">
+                            <span class="name">Людмила Зохова</span>
+                            <span class="date">20.10.2025</span>
+                        </div>
+                        <div class="review-stars">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                            <img src="{% static 'main/icons/review-star.svg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <span>Замечательная мастерская, отреставрировали мою брошь быстро и качественно.</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+    (function () {
+        const authorUrl = "{% url 'author_jewelry' %}";
+        document.querySelectorAll('.home-author-link-btn').forEach((btn) => {
+            btn.addEventListener('click', function () {
+                window.location.href = authorUrl;
+            });
+        });
+
+        const slider = document.getElementById('portfolioSlider');
+        if (!slider) return;
+
+        const track = slider.querySelector('.portfolio-slider-track');
+        const slides = Array.from(slider.querySelectorAll('.portfolio-slide'));
+        const prev = document.getElementById('portfolioPrev');
+        const next = document.getElementById('portfolioNext');
+
+        let index = 0;
+        const maxIndex = slides.length - 1;
+
+        function updateSlider() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prev.addEventListener('click', function () {
+            index = index === 0 ? maxIndex : index - 1;
+            updateSlider();
+        });
+
+        next.addEventListener('click', function () {
+            index = index === maxIndex ? 0 : index + 1;
+            updateSlider();
+        });
+    })();
+</script>
+{% endblock %}

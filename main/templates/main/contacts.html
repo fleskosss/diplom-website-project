@@ -1,0 +1,120 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Контакты
+{% endblock %}
+
+{% block body_class %}contacts-page-view{% endblock %}
+
+{% block content %}
+<main class="contacts-main">
+    <section class="contacts-page">
+        <h1>КОНТАКТЫ</h1>
+        <div class="contacts-top">
+            <div class="contacts-text">
+                <div class="contacts-text-upper">
+                <p>Адрес мастерской: Санкт-Петербург, Суворовский 35 дом быта</p>
+                <p>Телефон/WhatsApp/Telegram: [+7 XXX XXX-XX-XX] (для звонков или сообщений)</p>
+                <p>Электронная почта: [info@vash-sait.ru]</p>
+                <p>Режим работы: Пн-Пт: с 10:00 до 19:00, Сб: с 11:00 до 17:00, Вс: выходной</p>
+                <div class="contacts-divider"></div>
+                <div class="contacts-socials">
+                    <a href="#" class="contacts-social-link">
+                        <img src="{% static 'main/icons/instagram.svg' %}" alt="Instagram">
+                        <span>Инстаграмм</span>
+                    </a>
+                    <a href="#" class="contacts-social-link">
+                        <img src="{% static 'main/icons/telegram.svg' %}" alt="Telegram">
+                        <span>Телеграмм</span>
+                    </a>
+                    <a href="#" class="contacts-social-link">
+                        <img src="{% static 'main/icons/vk.svg' %}" alt="VK">
+                        <span>ВКонтакте</span>
+                    </a>
+                    <a href="#" class="contacts-social-link">
+                        <img src="{% static 'main/icons/max.svg' %}" alt="MAX">
+                        <span>MAX</span>
+                    </a>
+                </div>
+                </div>
+                <div class="contacts-note-row">
+                    <p class="contacts-note">Хотите отреставрировать любимую вещь, создать уникальное украшение или просто задать вопрос? Мы в деле!</p>
+                    <div class="contacts-note-line"></div>
+                </div>
+            </div>
+            <div class="contacts-photo">
+                <img src="{% static 'main/img/contacts/contacts-photo.png' %}" alt="Фото мастерской">
+            </div>
+        </div>
+        <div class="contacts-mobile-info">
+            <div class="contacts-mobile-quick-row">
+                <span>Телефон: [+7 XXX XXX-XX-XX]</span>
+                <span>Электронная почта: [info@vash]</span>
+            </div>
+            <div class="contacts-mobile-divider"></div>
+            <div class="contacts-mobile-socials">
+                <a href="#">
+                    <img src="{% static 'main/icons/instagram.svg' %}" alt="Instagram">
+                    <span>Инстаграмм</span>
+                </a>
+                <a href="#">
+                    <img src="{% static 'main/icons/telegram.svg' %}" alt="Telegram">
+                    <span>Телеграмм</span>
+                </a>
+                <a href="#">
+                    <img src="{% static 'main/icons/vk.svg' %}" alt="VK">
+                    <span>ВКонтакте</span>
+                </a>
+                <a href="#">
+                    <img src="{% static 'main/icons/max.svg' %}" alt="MAX">
+                    <span>MAX</span>
+                </a>
+            </div>
+            <p class="contacts-mobile-note">Хотите отреставрировать любимую вещь, создать уникальное украшение или просто задать вопрос? Мы в деле!</p>
+        </div>
+    </section>
+
+    <section class="contacts-map-section">
+        <h2>ГДЕ НАС НАЙТИ</h2>
+        <div class="contacts-map">
+            <iframe
+                src="https://www.google.com/maps?q=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,%20%D0%A1%D1%83%D0%B2%D0%BE%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%2035&output=embed"
+                width="100%"
+                height="500"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Карта: Санкт-Петербург, Суворовский 35 дом быта"></iframe>
+        </div>
+    </section>
+
+    <section class="contacts-form-section">
+        <h2>Заполните форму</h2>
+        <div class="contacts-form-layout">
+            <form class="contacts-form" action="{% url 'contacts' %}" method="post">
+                {% csrf_token %}
+                <p class="contacts-form-subtitle">Этот процесс — магия, доступная каждому. Не откладывайте свою идею.</p>
+                <label for="phone">Ваш контактный телефон</label>
+                <input id="phone" name="phone" type="tel" placeholder="Пример: +7 933 356 87 25" required>
+
+                <label for="question">Опишите Ваш вопрос</label>
+                <input id="question" name="question" type="text" placeholder="Пример: «Хочу восстановить украшение»" required>
+
+                <div class="contacts-form-bottom">
+                    <label class="checkbox-row">
+                        <input type="checkbox" name="consent" required>
+                        <span>Я соглашаюсь на обработку моих персональных данных</span>
+                    </label>
+
+                    <button type="submit">отправить форму</button>
+                </div>
+            </form>
+            <div class="contacts-form-image">
+                <img src="{% static 'main/img/form/form-image.png' %}" alt="Изображение формы">
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

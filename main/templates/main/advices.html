@@ -1,0 +1,401 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Советы
+{% endblock %}
+
+{% block body_class %}advices-page-view{% endblock %}
+
+{% block content %}
+<main class="advices-main">
+    <section class="advices-page">
+        <h1>СОВЕТЫ</h1>
+
+        <div class="advices-layout">
+            <div class="advices-content">
+                <h2>Информация</h2>
+                <p class="advices-lead">
+                    Здесь живут полезные советы и вдохновляющие новости о ваших любимых украшениях.
+                    <br/><br/>
+                    Мы создали этот уголок знаний, чтобы делиться с вами секретами ухода, историями из мастерской и тонкостями ювелирного искусства.
+                </p>
+
+                <div class="advices-separator"></div>
+
+                <p class="advices-footer-text">
+                    Читайте, чтобы ваши драгоценности сияли еще ярче, а новые покупки были осознанными и радостными.
+                </p>
+            </div>
+
+            <div class="advices-image">
+                <img src="{% static 'main/img/advices/photo.png' %}" alt="Советы">
+            </div>
+        </div>
+    </section>
+
+    <div class="advices-categories-articles-wrap">
+    <section class="advices-categories services-categories">
+        <div class="services-categories-row">
+            <button type="button" class="services-category advices-category-btn is-active" data-category="care">Хранение и уход</button>
+            <span class="services-category-line" aria-hidden="true"></span>
+            <button type="button" class="services-category advices-category-btn" data-category="buy">Покупка: советы</button>
+            <span class="services-category-line" aria-hidden="true"></span>
+            <button type="button" class="services-category advices-category-btn" data-category="news">Новости</button>
+            <span class="services-category-line" aria-hidden="true"></span>
+            <button type="button" class="services-category advices-category-btn" data-category="repair">Обновление и ремонт</button>
+        </div>
+    </section>
+
+    <section class="advices-articles">
+        <div class="advices-articles-group is-active" data-category="care">
+            <article class="advices-article-card">
+                <div class="advices-article-image">
+                    <img src="{% static 'main/img/tips_page/photo1.png' %}" alt="">
+                </div>
+                <div class="advices-article-content">
+                    <h3>Искусство заботы: Как сохранить блеск ваших золотых и серебряных украшений на долгие годы</h3>
+                    <p>От чистого золота до серебра — гид по чистке ваших украшений, чтобы свести к минимуму необходимость в глубокой чистке</p>
+                    <button type="button">читать подробнее</button>
+                </div>
+            </article>
+
+            <article class="advices-article-card">
+                <div class="advices-article-image">
+                    <img src="{% static 'main/img/tips_page/photo2.png' %}" alt="">
+                </div>
+                <div class="advices-article-content">
+                    <h3>Верните блеск за минуту: Как безопасно удалить темные пятна с цепочек и звеньев</h3>
+                    <p>Пошаговая инструкция по чистке труднодоступных мест на цепочках, браслетах-панцирях и ажурных серьгах, где чаще всего скапливается грязь.</p>
+                    <button type="button">читать подробнее</button>
+                </div>
+            </article>
+
+            <article class="advices-article-card">
+                <div class="advices-article-image">
+                    <img src="{% static 'main/img/tips_page/photo3.png' %}" alt="">
+                </div>
+                <div class="advices-article-content">
+                    <h3>Ультразвуковая ванна дома: Правда и мифы о профессиональных средствах чистки</h3>
+                    <p>Какие украшения можно и нельзя чистить ультразвуком, как выбрать раствор и избежать роковых ошибок при домашнем использовании.</p>
+                    <button type="button">читать подробнее</button>
+                </div>
+            </article>
+        </div>
+
+        <div class="advices-articles-group" data-category="buy">
+            <article class="advices-article-card">
+                <div class="advices-article-image">
+                    <img src="{% static 'main/img/tips_page/photo1.png' %}" alt="">
+                </div>
+                <div class="advices-article-content">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                    <button type="button">читать подробнее</button>
+                </div>
+            </article>
+            <article class="advices-article-card">
+                <div class="advices-article-image">
+                    <img src="{% static 'main/img/tips_page/photo2.png' %}" alt="">
+                </div>
+                <div class="advices-article-content">
+                    <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
+                    <button type="button">читать подробнее</button>
+                </div>
+            </article>
+            <article class="advices-article-card">
+                <div class="advices-article-image">
+                    <img src="{% static 'main/img/tips_page/photo3.png' %}" alt="">
+                </div>
+                <div class="advices-article-content">
+                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit.</p>
+                    <button type="button">читать подробнее</button>
+                </div>
+            </article>
+        </div>
+
+        <div class="advices-articles-group" data-category="news">
+            <article class="advices-article-card">
+                <div class="advices-article-image">
+                    <img src="{% static 'main/img/tips_page/photo1.png' %}" alt="">
+                </div>
+                <div class="advices-article-content">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                    <button type="button">читать подробнее</button>
+                </div>
+            </article>
+            <article class="advices-article-card">
+                <div class="advices-article-image">
+                    <img src="{% static 'main/img/tips_page/photo2.png' %}" alt="">
+                </div>
+                <div class="advices-article-content">
+                    <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
+                    <button type="button">читать подробнее</button>
+                </div>
+            </article>
+            <article class="advices-article-card">
+                <div class="advices-article-image">
+                    <img src="{% static 'main/img/tips_page/photo3.png' %}" alt="">
+                </div>
+                <div class="advices-article-content">
+                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit.</p>
+                    <button type="button">читать подробнее</button>
+                </div>
+            </article>
+        </div>
+
+        <div class="advices-articles-group" data-category="repair">
+            <article class="advices-article-card">
+                <div class="advices-article-image">
+                    <img src="{% static 'main/img/tips_page/photo1.png' %}" alt="">
+                </div>
+                <div class="advices-article-content">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                    <button type="button">читать подробнее</button>
+                </div>
+            </article>
+            <article class="advices-article-card">
+                <div class="advices-article-image">
+                    <img src="{% static 'main/img/tips_page/photo2.png' %}" alt="">
+                </div>
+                <div class="advices-article-content">
+                    <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
+                    <button type="button">читать подробнее</button>
+                </div>
+            </article>
+            <article class="advices-article-card">
+                <div class="advices-article-image">
+                    <img src="{% static 'main/img/tips_page/photo3.png' %}" alt="">
+                </div>
+                <div class="advices-article-content">
+                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit.</p>
+                    <button type="button">читать подробнее</button>
+                </div>
+            </article>
+        </div>
+    </section>
+    </div>
+
+    <section class="advices-accordion" aria-label="Категории советов">
+        <div class="advices-accordion-item is-open" data-category="care">
+            <button type="button" class="advices-accordion-toggle">
+                <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                <span>Хранение и уход</span>
+            </button>
+            <div class="advices-accordion-content">
+                <article class="advices-article-card">
+                    <div class="advices-article-image">
+                        <img src="{% static 'main/img/tips_page/photo1.png' %}" alt="">
+                    </div>
+                    <div class="advices-article-content">
+                        <h3>Искусство заботы: Как сохранить блеск ваших золотых и серебряных украшений на долгие годы</h3>
+                        <p>От чистого золота до серебра — гид по чистке ваших украшений, чтобы свести к минимуму необходимость в глубокой чистке</p>
+                        <button type="button">читать подробнее</button>
+                    </div>
+                </article>
+                <article class="advices-article-card">
+                    <div class="advices-article-image">
+                        <img src="{% static 'main/img/tips_page/photo2.png' %}" alt="">
+                    </div>
+                    <div class="advices-article-content">
+                        <h3>Верните блеск за минуту: Как безопасно удалить темные пятна с цепочек и звеньев</h3>
+                        <p>Пошаговая инструкция по чистке труднодоступных мест на цепочках, браслетах-панцирях и ажурных серьгах, где чаще всего скапливается грязь.</p>
+                        <button type="button">читать подробнее</button>
+                    </div>
+                </article>
+                <article class="advices-article-card">
+                    <div class="advices-article-image">
+                        <img src="{% static 'main/img/tips_page/photo3.png' %}" alt="">
+                    </div>
+                    <div class="advices-article-content">
+                        <h3>Ультразвуковая ванна дома: Правда и мифы о профессиональных средствах чистки</h3>
+                        <p>Какие украшения можно и нельзя чистить ультразвуком, как выбрать раствор и избежать роковых ошибок при домашнем использовании.</p>
+                        <button type="button">читать подробнее</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="advices-accordion-item" data-category="buy">
+            <button type="button" class="advices-accordion-toggle">
+                <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                <span>Покупка: советы</span>
+            </button>
+            <div class="advices-accordion-content">
+                <article class="advices-article-card">
+                    <div class="advices-article-image">
+                        <img src="{% static 'main/img/tips_page/photo1.png' %}" alt="">
+                    </div>
+                    <div class="advices-article-content">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                        <button type="button">читать подробнее</button>
+                    </div>
+                </article>
+                <article class="advices-article-card">
+                    <div class="advices-article-image">
+                        <img src="{% static 'main/img/tips_page/photo2.png' %}" alt="">
+                    </div>
+                    <div class="advices-article-content">
+                        <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
+                        <button type="button">читать подробнее</button>
+                    </div>
+                </article>
+                <article class="advices-article-card">
+                    <div class="advices-article-image">
+                        <img src="{% static 'main/img/tips_page/photo3.png' %}" alt="">
+                    </div>
+                    <div class="advices-article-content">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit.</p>
+                        <button type="button">читать подробнее</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="advices-accordion-item" data-category="news">
+            <button type="button" class="advices-accordion-toggle">
+                <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                <span>Новости</span>
+            </button>
+            <div class="advices-accordion-content">
+                <article class="advices-article-card">
+                    <div class="advices-article-image">
+                        <img src="{% static 'main/img/tips_page/photo1.png' %}" alt="">
+                    </div>
+                    <div class="advices-article-content">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                        <button type="button">читать подробнее</button>
+                    </div>
+                </article>
+                <article class="advices-article-card">
+                    <div class="advices-article-image">
+                        <img src="{% static 'main/img/tips_page/photo2.png' %}" alt="">
+                    </div>
+                    <div class="advices-article-content">
+                        <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
+                        <button type="button">читать подробнее</button>
+                    </div>
+                </article>
+                <article class="advices-article-card">
+                    <div class="advices-article-image">
+                        <img src="{% static 'main/img/tips_page/photo3.png' %}" alt="">
+                    </div>
+                    <div class="advices-article-content">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit.</p>
+                        <button type="button">читать подробнее</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="advices-accordion-item" data-category="repair">
+            <button type="button" class="advices-accordion-toggle">
+                <img class="about-stage-icon about-stage-icon-opened" src="{% static 'main/icons/opened-row-about-us.svg' %}" alt="Открыть">
+                <img class="about-stage-icon about-stage-icon-closed" src="{% static 'main/icons/closed-row-about-us.svg' %}" alt="Закрыть">
+                <span>Обновление и ремонт</span>
+            </button>
+            <div class="advices-accordion-content">
+                <article class="advices-article-card">
+                    <div class="advices-article-image">
+                        <img src="{% static 'main/img/tips_page/photo1.png' %}" alt="">
+                    </div>
+                    <div class="advices-article-content">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                        <button type="button">читать подробнее</button>
+                    </div>
+                </article>
+                <article class="advices-article-card">
+                    <div class="advices-article-image">
+                        <img src="{% static 'main/img/tips_page/photo2.png' %}" alt="">
+                    </div>
+                    <div class="advices-article-content">
+                        <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
+                        <button type="button">читать подробнее</button>
+                    </div>
+                </article>
+                <article class="advices-article-card">
+                    <div class="advices-article-image">
+                        <img src="{% static 'main/img/tips_page/photo3.png' %}" alt="">
+                    </div>
+                    <div class="advices-article-content">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit.</p>
+                        <button type="button">читать подробнее</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    (function () {
+        const buttons = Array.from(document.querySelectorAll('.advices-category-btn'));
+        const groups = Array.from(document.querySelectorAll('.advices-articles-group'));
+        if (!buttons.length || !groups.length) return;
+
+        function setActive(key) {
+            buttons.forEach((b) => b.classList.toggle('is-active', b.dataset.category === key));
+            groups.forEach((g) => g.classList.toggle('is-active', g.dataset.category === key));
+        }
+
+        buttons.forEach((b) => {
+            b.addEventListener('click', () => setActive(b.dataset.category));
+        });
+
+        const adviceSlugMap = {
+            'Искусство заботы: Как сохранить блеск ваших золотых и серебряных украшений на долгие годы': 'care-gold-silver-shine',
+            'Верните блеск за минуту: Как безопасно удалить темные пятна с цепочек и звеньев': 'clean-dark-spots-fast',
+            'Ультразвуковая ванна дома: Правда и мифы о профессиональных средствах чистки': 'ultrasound-myths',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit': 'buy-guide-1',
+            'Lorem ipsum dolor sit amet, consectetur': 'buy-guide-2',
+            'Lorem ipsum dolor sit amet': 'buy-guide-3'
+        };
+
+        const readMoreButtons = Array.from(document.querySelectorAll('.advices-article-content button[type="button"]'));
+        readMoreButtons.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const card = btn.closest('.advices-article-content');
+                const titleElement = card ? card.querySelector('h3') : null;
+                const articleTitle = titleElement ? titleElement.textContent.trim() : '';
+                const slug = adviceSlugMap[articleTitle];
+                if (!slug) return;
+                window.location.href = `/advices/${slug}/`;
+            });
+        });
+
+        const accItems = Array.from(document.querySelectorAll('.advices-accordion-item'));
+        accItems.forEach((item) => {
+            const toggle = item.querySelector('.advices-accordion-toggle');
+            if (!toggle) return;
+            toggle.addEventListener('click', () => {
+                const isOpen = item.classList.contains('is-open');
+                accItems.forEach((i) => i.classList.remove('is-open'));
+                item.classList.toggle('is-open', !isOpen);
+            });
+        });
+    })();
+</script>
+{% endblock %}
+

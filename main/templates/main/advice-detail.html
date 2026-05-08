@@ -1,0 +1,169 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Советы
+{% endblock %}
+
+{% block body_class %}advices-detail-page-view{% endblock %}
+
+{% block content %}
+<main class="advices-detail-main">
+    <section class="advices-detail-page">
+        <div class="advices-detail-header">
+            <h1>СОВЕТЫ</h1>
+            <a class="advices-back-btn" href="{% url 'advices' %}">вернуться на советы</a>
+        </div>
+
+        <article class="advices-detail-article">
+            <div class="advices-detail-image">
+                <img src="{% static article.image %}" alt="{{ article.title }}">
+            </div>
+
+            <div class="advices-detail-content">
+                <h2 class="advices-detail-main-title">{{ article.title }}</h2>
+                <p class="advices-detail-main-text">{{ article.lead }}</p>
+
+                <div class="advices-detail-divider"></div>
+
+                <h3 class="advices-detail-info-title">{{ article_info.info_title }}</h3>
+                <p class="advices-detail-info-text">{{ article_info.info_text }}</p>
+                <p class="advices-detail-footer-text">{{ article_info.footer_text }}</p>
+            </div>
+        </article>
+
+        {% if article.gold_section %}
+        <section class="advices-detail-gold-section" aria-labelledby="advices-detail-gold-title">
+            <h2 id="advices-detail-gold-title" class="advices-detail-gold-title">{{ article.gold_section.title }}</h2>
+            <div class="advices-detail-gold-row">
+                <div class="advices-detail-gold-image">
+                    <img src="{% static article.gold_section.image %}" alt="">
+                </div>
+                <div class="advices-detail-gold-body">
+                    <p class="advices-detail-gold-intro">{{ article.gold_section.intro }}</p>
+                    <p class="advices-detail-gold-enemies-label">Основные враги золота:</p>
+                    {% for line in article.gold_section.enemy_items %}
+                    <p class="advices-detail-gold-enemy-line">{{ line }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+
+        {% if article.rules_clean_section %}
+        <section class="advices-detail-rules-section" aria-label="Правила ношения и чистка золота">
+            <div class="advices-detail-rules-columns">
+                <div class="advices-detail-rules-col">
+                    <h3 class="advices-detail-rules-col-title">{{ article.rules_clean_section.left_title }}</h3>
+                    <div class="advices-detail-rules-col-body">
+                        {% for line in article.rules_clean_section.left_items %}
+                        <p>{{ line }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="advices-detail-rules-col">
+                    <h3 class="advices-detail-rules-col-title">{{ article.rules_clean_section.right_title }}</h3>
+                    <div class="advices-detail-rules-col-body">
+                        {% for line in article.rules_clean_section.right_items %}
+                        <p>{{ line }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="advices-detail-section-rule" role="presentation">
+            <hr class="advices-detail-section-rule-line">
+        </div>
+        {% endif %}
+
+        {% if article.silver_section %}
+        <section class="advices-detail-silver-section" aria-labelledby="advices-detail-silver-title">
+            <h2 id="advices-detail-silver-title" class="advices-detail-silver-title">{{ article.silver_section.title }}</h2>
+            <div class="advices-detail-silver-row">
+                <div class="advices-detail-silver-body">
+                    <p class="advices-detail-silver-intro">{{ article.silver_section.intro }}</p>
+                    <p class="advices-detail-silver-enemies-label">{{ article.silver_section.enemies_label }}</p>
+                    {% for line in article.silver_section.enemy_items %}
+                    <p class="advices-detail-silver-enemy-line">{{ line }}</p>
+                    {% endfor %}
+                </div>
+                <div class="advices-detail-silver-image">
+                    <img src="{% static article.silver_section.image %}" alt="">
+                </div>
+            </div>
+
+            <div class="advices-detail-silver-rules" aria-label="Правила для серебра">
+                <div class="advices-detail-rules-columns">
+                    <div class="advices-detail-rules-col">
+                        <h3 class="advices-detail-rules-col-title">{{ article.silver_section.wear_title }}</h3>
+                        <div class="advices-detail-rules-col-body">
+                            {% for line in article.silver_section.wear_items %}
+                            <p>{{ line }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="advices-detail-rules-col">
+                        <h3 class="advices-detail-rules-col-title">{{ article.silver_section.clean_title }}</h3>
+                        <div class="advices-detail-rules-col-body">
+                            {% for line in article.silver_section.clean_items %}
+                            <p>{{ line }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="advices-detail-section-rule" role="presentation">
+            <hr class="advices-detail-section-rule-line">
+        </div>
+        {% endif %}
+
+        {% if article.special_cases_section %}
+        <section class="advices-detail-special-section" aria-labelledby="advices-detail-special-title">
+            <h2 id="advices-detail-special-title" class="advices-detail-special-title">{{ article.special_cases_section.title }}</h2>
+
+            <div class="advices-detail-special-intro">
+                <div class="advices-detail-rules-columns">
+                    <div class="advices-detail-rules-col">
+                        <h3 class="advices-detail-rules-col-title">{{ article.special_cases_section.stones_heading }}</h3>
+                        <div class="advices-detail-rules-col-body">
+                            {% for para in article.special_cases_section.stones_paragraphs %}
+                            <p>{{ para }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="advices-detail-rules-col">
+                        <h3 class="advices-detail-rules-col-title">{{ article.special_cases_section.ban_heading }}</h3>
+                        <div class="advices-detail-rules-col-body">
+                            {% for para in article.special_cases_section.ban_paragraphs %}
+                            <p>{{ para }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advices-detail-special-pro-row">
+                <div class="advices-detail-special-pro-image">
+                    <img src="{% static article.special_cases_section.pro_image %}" alt="">
+                </div>
+                <div class="advices-detail-special-pro-body">
+                    <h3 class="advices-detail-special-pro-heading">{{ article.special_cases_section.pro_heading }}</h3>
+                    {% for para in article.special_cases_section.pro_paragraphs %}
+                    <p>{{ para }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+
+        {% if article.gold_section and not article.rules_clean_section %}
+        <div class="advices-detail-section-rule" role="presentation">
+            <hr class="advices-detail-section-rule-line">
+        </div>
+        {% endif %}
+    </section>
+</main>
+{% endblock %}

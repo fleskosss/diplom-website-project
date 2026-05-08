@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+404
+{% endblock %}
+
+{% block body_class %}page-404{% endblock %}
+
+{% block content %}
+<main class="page-404-main">
+    <section class="page-404-hero">
+        <img src="{% static 'main/img/page_404/photo_new.png' %}" alt="404">
+        <div class="page-404-overlay">
+            <h1 class="page-404-title">
+                <span>4</span>
+                <div class="page-404-zero-wrap">
+                    <img src="{% static 'main/img/page_404/vetrino_0.png' %}" alt="0">
+                </div>
+                <span>4</span>
+            </h1>
+            <h2>Страница не найдена</h2>
+            <p>Возможно такой страницы не существует.<br>Но вы можете вернуться на главную</p>
+            <a href="{% url 'home' %}" class="page-404-home-btn">вернуться на главную</a>
+        </div>
+    </section>
+</main>
+{% endblock %}
